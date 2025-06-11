@@ -24,6 +24,10 @@
   gap: 20px;
 }
 
+.box-padding {
+  padding: 80px 90px;
+}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -40,13 +44,13 @@ main {
       width: 1000px;
       height: 320px;
       background-color: white;
-      border: 1px solid red;
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      box-sizing: border-box;
+
       img {
         width: 150px;
         height: 150px;
-        margin-left: 80px;
       }
 
       .info-box {
@@ -118,12 +122,37 @@ main {
           }
         }
       }
+
+      .price-box {
+        span {
+          font-weight: 700;
+          font-size: 25px;
+          color: black;
+        }
+      }
     }
     .shop-more-box {
+      box-sizing: border-box;
       width: 1000px;
       height: 100px;
       background-color: white;
-      // border: 1px solid red;
+
+      .content-shop-more-box {
+        display: flex;
+        padding: 30px 90px;
+        box-sizing: border-box;
+
+        span {
+          font-weight: 700;
+          font-size: 25px;
+          color: grey;
+        }
+        .shop-more-text {
+          font-weight: 900;
+          font-size: 25px;
+          color: black;
+        }
+      }
     }
   }
 
@@ -136,41 +165,151 @@ main {
       width: 600px;
       height: 320px;
       background-color: white;
-      // border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      justify-content: space-between;
+      padding: 50px;
+
+      .amount-text {
+        font-weight: 900;
+        font-size: 30px;
+        color: grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price {
+        font-weight: 700;
+        font-size: 30px;
+        color: black;
+      }
     }
 
     .totaly-box {
       width: 600px;
       height: 100px;
       background-color: white;
-      // border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 25px 70px;
+
+      .totaly-text {
+        font-weight: 900;
+        font-size: 30px;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .totaly-price {
+        font-weight: 900;
+        font-size: 30px;
+        color: black;
+      }
     }
 
     span {
       font-weight: 700;
       font-size: 30px;
       color: black;
-      margin: 40px 0px 10px 0px;
+      margin: 0px 0px 0px 0px;
     }
 
     .coupon-box {
       width: 600px;
       height: 100px;
       background-color: white;
-      // border: 1px solid purple;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 25px 0px 0px 50px;
+      box-sizing: border-box;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      span {
+        font-weight: 900;
+        font-size: 30px;
+        color: grey;
+      }
+
+      span:nth-child(2) {
+        font-weight: 700;
+        font-size: 30px;
+        position: absolute;
+        margin-left: 11px;
+      }
     }
 
     .method-payment-box {
       width: 600px;
       height: 550px;
       background-color: white;
-      // border: 1px solid yellow;
-    }
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      padding: 70px;
+      box-sizing: border-box;
+      gap: 25px;
 
-    .payment-box {
-      width: 600px;
-      height: 100px;
-      // background-color: black;
+      .image-box {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr 4fr;
+        align-items: center;
+        
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .card {
+          width: 40px;
+          height: 30px;
+        }
+
+        .naoseleciona-img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .paypal-img {
+          width: 170px;
+          height: 75px;
+        }
+      }
+    }
+  }
+
+  .payment-details-box {
+
+    .payment-detail-info {
+      font-weight: 900;
+      font-size: 25px;
+      color: black;
+    }
+  }
+  .payment-box {
+    width: 600px;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-weight: 900;
+      font-size: 30px;
+      color: white;
     }
   }
 }
